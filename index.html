@@ -1,37 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yurder Manosalva</title>
-    <style>
-        body, html{
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: bisque;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mi primera página - Nombre</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hola — Soy Nombre Apellido</h1>
+      <p class="bio">Soy un entusiasta del desarrollo web y la programación.<br>
+        Me encanta aprender nuevas tecnologías y aplicarlas en proyectos creativos.<br>
+        Actualmente me enfoco en dominar HTML, CSS y JavaScript.<br>
+        Busco compartir conocimientos y colaborar en la comunidad.
+      </p>
+    </header>
 
-        .back {
-            background-color: white;
-            padding: 30px;
-            border-radius: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="back">
-        <h1>Yurder Manosalva</h1>
-        <h1>Yurder Manosalva</h1>
-        <button onclick="CambiarColor()">Cambiar Color</button>
-    </div>
-    <script>
-        function CambiarColor(){
-            document.body.style.backgroundColor = "black"
-        }
-    </script>
-</body>
+    <section class="texto">
+      <h2>Etiquetas de texto</h2>
+      <p><strong>Incluye:</strong> &lt;h1&gt;–&lt;h6&gt;, &lt;p&gt;, &lt;b&gt;, &lt;strong&gt;, &lt;i&gt;, &lt;em&gt;, &lt;blockquote&gt;, &lt;q&gt;, &lt;br&gt;, &lt;hr&gt;</p>
+      <h3>Subtítulo de Nivel 3</h3>
+      <h4>Subtítulo de Nivel 4</h4>
+      <h5>Subtítulo de Nivel 5</h5>
+      <h6>Subtítulo de Nivel 6</h6>
+
+      <p>
+        Este es un párrafo de ejemplo. Aquí usamos texto en **negrita** con la etiqueta <b>&lt;b&gt;</b> y texto <strong style="font-weight: 900;">importante</strong> con <strong>&lt;strong&gt;</strong>.
+        También podemos incluir texto en *cursiva* con <i>&lt;i&gt;</i> y texto *enfatizado* con <em>&lt;em&gt;</em>.
+      </p>
+
+      <blockquote cite="https://es.wikipedia.org/wiki/HTML">
+        HTML es el lenguaje de marcado estándar para documentos diseñados para mostrarse en un navegador web.
+      </blockquote>
+      <p>Un texto citado en línea sería: <q>El conocimiento es poder</q>.</p>
+
+      <p>
+        Esta es la primera línea.<br> Esta es la segunda línea.
+      </p>
+      <hr> </section>
+
+    <section class="agrupacion">
+      <h2>Agrupación de contenido</h2>
+      <p><strong>Incluye:</strong> &lt;div&gt;, &lt;span&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;</p>
+      <main> <div class="contenedor-principal">
+          <article>
+            <h3>Mi Primer Artículo</h3>
+            <p>Este es el contenido de un artículo, una pieza de contenido independiente y autocontenida, como una entrada de blog o una noticia. El uso de **&lt;span&gt;** es para dar estilo a <span style="color: blue;">pequeñas porciones</span> de texto dentro de un párrafo.</p>
+          </article>
+          <aside>
+            <h4>Nota Lateral</h4>
+            <p>Esta es una nota al margen del contenido principal, a menudo relacionada, pero no esencial para entender el artículo.</p>
+          </aside>
+        </div>
+      </main>
+    </section>
+
+    <section class="semantica">
+      <h2>Estructura semántica</h2>
+      <p><strong>Incluye:</strong> &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;</p>
+      <nav>
+        <ul>
+          <li><a href="#texto">Texto</a></li>
+          <li><a href="#tablas">Tablas</a></li>
+          <li><a href="#multimedia">Multimedia</a></li>
+        </ul>
+      </nav>
+      </section>
+
+    <section class="tablas" id="tablas">
+      <h2>Tablas</h2>
+      <p><strong>Incluye:</strong> &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</p>
+      <table>
+        <caption>Calificaciones del Semestre</caption>
+        <thead>
+          <tr>
+            <th scope="col">Materia</th>
+            <th scope="col">Créditos</th>
+            <th scope="col">Nota Final</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Introducción a HTML</th>
+            <td>4</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <th scope="row">Algoritmos</th>
+            <td>5</td>
+            <td>B+</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total de Créditos</td>
+            <td>9</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section class="multimedia" id="multimedia">
+      <h2>Contenido multimedia</h2>
+      <p><strong>Incluye:</strong> &lt;img&gt;, &lt;audio&gt;, &lt;video&gt;, &lt;figure&gt;, &lt;figcaption&gt;</p>
+      <figure>
+        <img src="https://picsum.photos/400/200" alt="Ejemplo de una imagen aleatoria" style="max-width: 100%; height: auto;">
+        <figcaption>Figura 1: Ilustración de un concepto web.</figcaption>
+      </figure>
+
+      <h4>Música de Fondo</h4>
+      <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+
+      <h4>Tutorial Corto</h4>
+      <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </section>
+
+    <section class="enlaces">
+      <h2>Enlaces y botones</h2>
+      <p><strong>Incluye:</strong> &lt;a&gt;, &lt;button&gt;, &lt;nav&gt;, &lt;link&gt;</p>
+      <h4>Navegación Rápida</h4>
+      <nav>
+        <ul>
+          <li><a href="#tablas">Ir a Tablas</a></li>
+          <li><a href="https://www.google.com" target="_blank" rel="noopener">Google (Enlace Externo)</a></li>
+        </ul>
+      </nav>
+
+      <h4>Acción</h4>
+      <button type="button" onclick="alert('¡Botón presionado!')">Haz Clic</button>
+    </section>
+
+    <section class="formularios">
+      <h2>Formularios</h2>
+      <p><strong>Incluye:</strong> &lt;form&gt;, &lt;label&gt;, &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, &lt;option&gt;, &lt;button&gt;</p>
+      <form action="/submit-form" method="post">
+        <div>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        
+        <div>
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div>
+          <label for="asunto">Asunto:</label>
+          <select id="asunto" name="asunto">
+            <option value="consulta">Consulta General</option>
+            <option value="soporte">Soporte Técnico</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+        
+        <button type="submit">Enviar Formulario</button>
+      </form>
+    </section>
+
+    <section class="listas">
+      <h2>Listas</h2>
+      <p><strong>Incluye:</strong> &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</p>
+      <h4>Mis Hobbies (Lista No Ordenada)</h4>
+      <ul>
+        <li>Leer ciencia ficción</li>
+        <li>Jugar videojuegos</li>
+        <li>Hacer senderismo</li>
+      </ul>
+
+      <h4>Pasos para Configurar (Lista Ordenada)</h4>
+      <ol>
+        <li>Descargar el software.</li>
+        <li>Ejecutar el instalador.</li>
+        <li>Reiniciar el equipo.</li>
+      </ol>
+
+      <h4>Términos Clave (Lista de Definición)</h4>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language (Lenguaje de Marcado de Hipertexto).</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets (Hojas de Estilo en Cascada).</dd>
+      </dl>
+    </section>
+
+    <footer>
+      <h2>Pie de página</h2>
+      <p><strong>Incluye:</strong> &lt;footer&gt;, &lt;small&gt;, &lt;address&gt;, &lt;a&gt;</p>
+      <p>Recurso recomendado: 
+        <a href="https://lenguajehtml.com/html/" target="_blank" rel="noopener">Lenguaje HTML</a>
+      </p>
+      <address>
+        Contacto: <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a>
+      </address>
+      <p><small>&copy; 2025 Nombre Apellido. Todos los derechos reservados.</small></p>
+    </footer>
+  </body>
 </html>
