@@ -1,41 +1,49 @@
-<p align="center">
-  <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo" width="80" height="80" />
-  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="80" height="80" />
-</p>
+# 🚀 Proyecto Web del Bootcamp de Prog. Básica
 
-# Flujo Básico de Git y GitHub desde la Terminal
+Este es un proyecto que utiliza tecnologías como **HTML**, **CSS** y **Javascript** para mostrar como estructurar y crear una aplicación Web con un despliegue usando **GitHub Pages**
 
-Este documento describe el proceso paso a paso para inicializar un proyecto con Git, conectarlo a un repositorio remoto en GitHub, y realizar el primer commit en la rama principal (`master`).
+## 📁 Estructura del Proyecto
 
----
+```plaintext
+/
+├── index.html                # Página principal
+├── readme.md                 # Información del proyecto
+├── html/
+│   ├── miprimerapágina.html  # 
+│   ├── .html                 # 
+│   ├── .html                 # 
+│   ├── .html                 # 
+│   └── .html                 # 
+├── css/
+│   ├── style.css             # Hoja de estilos externa común a todas las páginas
+│   └── .css                  # Script para aprender estilos de css
+└── js/
+    ├── function.js           # Script que contiene lógica de javascript
+    └── .js                   # Script para aprender js
+```
 
-## 1. Creación e Inicialización del Proyecto Local
+## 🛠️ Tecnologías Utilizadas
 
-Se realizan los siguientes comandos desde la terminal para crear la estructura básica del proyecto e inicializar Git.
+| Tecnología              | Logo                                                                  | Descripción                                                                                   |
+|-------------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| **HTML5**               | ![HTML5](https://img.icons8.com/color/48/html-5--v1.png)              | Lenguaje de marcado usado para estructurar las páginas web.                                   |
+| **CSS3**                | ![CSS3](https://img.icons8.com/color/48/css3.png)                     | Hojas de estilo para personalizar la apariencia de la web.                                    |
+| **JavaScript**          | ![JS](https://img.icons8.com/color/48/javascript--v1.png)             | Se utilizará más adelante para validaciones y lógica interactiva.                             |
+| **SweetAlert2**         | <img src="https://sweetalert2.github.io/images/SweetAlert2.png" alt="SweetAlert2" width="48" height="48">  | Librería JS para mostrar alertas modernas, elegantes y personalizadas.                        |
+<!-- | **SweetAlert2**         | ![SweetAlert2](https://sweetalert2.github.io/images/SweetAlert2.png)  | Librería JS para mostrar alertas modernas, elegantes y personalizadas.                        | -->
 
-| Paso | Comando de Terminal | Descripción |
-| :--- | :--- | :--- |
-| **1.1** | `mkdir mi-primer-proyecto-git` | Crea una nueva carpeta para el proyecto. |
-| **1.2** | `cd mi-primer-proyecto-git` | Navega al directorio recién creado. |
-| **1.3** | `touch index.html` | Crea el archivo principal del proyecto. |
-| **1.4** | `git init` | Inicializa un repositorio Git vacío en el directorio actual. |
+<!-- Para agregarle el enlace
+<a href="https://sweetalert2.github.io/">
+  <img src="https://sweetalert2.github.io/images/SweetAlert2.png" alt="SweetAlert2" width="48" height="48">
+</a> -->
 
----
+## 📁 Eliminar último commit 
 
-## 2. Contenido del Archivo `index.html`
+Guarda un respaldo antes de resetear. (Opcional) 
+git branch respaldo-antes-del-reset
 
-Para cumplir con la estructura mínima, se agrega el siguiente contenido al archivo `index.html`:
+1. Elimina el último commit localmente (Moverá HEAD y master al commit anterior)
+git reset --hard HEAD~1
 
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primer Proyecto Git</title>
-</head>
-<body>
-    <h1>¡Hola, GitHub!</h1>
-    <p>Este es el contenido inicial de mi proyecto subido usando el flujo de Git desde la terminal.</p>
-</body>
-</html>
+2. Sube ese cambio al repositorio remoto
+git push origin master --force
