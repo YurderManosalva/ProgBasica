@@ -14,7 +14,7 @@ console.log("Adultos")
 console.log("Tecera edad")
 }else {
 console.log("Edad invalida")
-}*/
+}
 
 let edad = parseInt(prompt("Ingrese edad"))
 let estatura = parseInt(prompt("Ingrese estatura en centimetros"))
@@ -37,6 +37,22 @@ if(edad > 14 && estatura >= 100 ){
         text: `Edad: ${edad}, Estatura: ${estatura}`,
         icon: "error"
       });
+}*/
+
+
+let base = parseInt(prompt("Ingrese base"))
+let altura = parseInt(prompt("Ingrese altura"))
+
+if(base > 0 && altura > 0){
+    Swal.fire({
+        title: "Area del rectangulo",
+        text: `Area: ${base * altura}`,
+        icon: "success"
+    });
+}else {
+    Swal.fire({
+        title: "Valores no validos",
+        text: `Base: ${base}, Altura: ${altura}`,
+        icon:"error"
+    });
 }
-
-
